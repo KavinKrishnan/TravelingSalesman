@@ -98,7 +98,7 @@ def simAnneal(file,cutTime,rseed):
 
         coolCount += 1
 
-    return currSolution, currCost
+    return currSolution, currCost, time.time() - start
 
 # answer = simAnneal('./DATA/Boston.tsp',1,0)
 # print(answer[0])

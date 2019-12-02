@@ -169,7 +169,7 @@ def branchBound(file,cutTime,rseed):
     for i in range(len(bestSol)):
         sol.append(bestSol[i][0])
 
-    return sol, cost
+    return sol, cost, time.time() - start
 
 # answer = branchBound('./DATA/Atlanta.tsp',1,0)
 # print(answer[0])
