@@ -4,6 +4,7 @@
     <list default="true" id="d84e69e7-4e17-4124-a56e-cbb8940b171f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSPBranchBoundEdge.py" beforeDir="false" afterPath="$PROJECT_DIR$/TSPBranchBoundEdge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSP_LS_SA.py" beforeDir="false" afterPath="$PROJECT_DIR$/TSP_LS_SA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +159,8 @@
       <workItem from="1574963482666" duration="24466000" />
       <workItem from="1575086830058" duration="11000" />
       <workItem from="1575268462433" duration="4409000" />
-      <workItem from="1575272926094" duration="831000" />
+      <workItem from="1575272926094" duration="928000" />
+      <workItem from="1575329535884" duration="26000" />
     </task>
     <servers />
   </component>

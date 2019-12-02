@@ -67,7 +67,7 @@ def simAnneal(file,cutTime,rseed):
     while currTemp > terminalTemp:
 
         if (time.time() - start) >= cutTime:
-            return currSolution, currCost
+            return currSolution, currCost, time.time() - start
 
         newSolution = currSolution
         swapNode0Ind, swapNode1Ind = rand.sample(range(N),2)
