@@ -75,8 +75,7 @@ def branchBound(file,cutTime,rseed):
     root = (reduceCost, [], WEIGHTS)
     nodes.put(root)
     UPPERBOUND = float('inf')
-    bestSol = [i for i in range(N)]
-    rand.shuffle(bestSol)
+    bestSol = []
 
 
     while not nodes.empty():
@@ -84,13 +83,22 @@ def branchBound(file,cutTime,rseed):
             if len(bestSol) > 0:
                 bestSol += [(bestSol[-1][1], bestSol[0][0])]
 
-            cost = 0
-            for (r, c) in bestSol:
-                cost += WEIGHT_ORIGINAL[r, c]
+                cost = 0
+                for (r, c) in bestSol:
+                    cost += WEIGHT_ORIGINAL[r, c]
 
-            sol = []
-            for i in range(len(bestSol)):
-                sol.append(bestSol[i][0])
+                sol = []
+                for i in range(len(bestSol)):
+                    sol.append(bestSol[i][0])
+            else:
+                sol = [i for i in range(N)]
+                rand.shuffle(sol)
+
+                cost = 0
+                lastNode = sol[-1]
+                for c in sol:
+                    cost += WEIGHT_ORIGINAL[lastNode, c]
+                    lastNode = c
 
             return sol, cost, time.time() - start
 
@@ -201,7 +209,7 @@ def branchBound(file,cutTime,rseed):
 
     return sol, cost, time.time() - start
 
-# answer = branchBound('./DATA/Atlanta.tsp',1,0)
+# answer = branchBound('./DATA/Boston.tsp',26000,0)
 # print(answer[0])
 # print(answer[1])
 
