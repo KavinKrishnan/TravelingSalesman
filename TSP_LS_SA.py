@@ -87,9 +87,12 @@ def simAnneal(file,cutTime,rseed):
         if newCost < currCost:
             currSolution = newSolution
             currCost = newCost
+
+            print(str(currSolution) + ", " + str(currCost) + ", " + str(time.time() - start))
         elif np.exp((currCost - newCost) / currTemp) > rand.random():
             currSolution = newSolution
             currCost = newCost
+            print(str(currSolution) + ", " + str(currCost) + ", " + str(time.time() - start))
 
         if coolCount == ((N+1)*N):
             currTemp *= coolRate

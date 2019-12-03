@@ -120,6 +120,16 @@ def branchBound(file,cutTime,rseed):
             if currCost < UPPERBOUND:
                 UPPERBOUND = currCost
                 bestSol = currSol
+
+                cost = 0
+                for (r, c) in bestSol:
+                    cost += WEIGHT_ORIGINAL[r, c]
+
+                sol = []
+                for i in range(len(bestSol)):
+                    sol.append(bestSol[i][0])
+
+                print(str(sol) + ", " + str(cost) + ", " + str(time.time() - start))
             continue
 
         if len(currSol) == (N-1):
@@ -128,6 +138,16 @@ def branchBound(file,cutTime,rseed):
             if currCost < UPPERBOUND:
                 UPPERBOUND = currCost
                 bestSol = currSol
+
+                cost = 0
+                for (r, c) in bestSol:
+                    cost += WEIGHT_ORIGINAL[r, c]
+
+                sol = []
+                for i in range(len(bestSol)):
+                    sol.append(bestSol[i][0])
+
+                print(str(sol) + ", " + str(cost) + ", " + str(time.time() - start))
             continue
 
         if len(currSol) == (N-2):
@@ -136,6 +156,16 @@ def branchBound(file,cutTime,rseed):
             if currCost < UPPERBOUND:
                 UPPERBOUND = currCost
                 bestSol = currSol
+
+                cost = 0
+                for (r, c) in bestSol:
+                    cost += WEIGHT_ORIGINAL[r, c]
+
+                sol = []
+                for i in range(len(bestSol)):
+                    sol.append(bestSol[i][0])
+
+                print(str(sol) + ", " + str(cost) + ", " + str(time.time() - start))
             continue
 
         # Left child representing solutions with Selected Edge
